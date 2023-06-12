@@ -31,6 +31,7 @@ Organizzare i singoli membri in card/schede ispirandovi alle immagini in allegat
 # OUR TEAM
 ## FASE 1 - Preliminare
 - Collegare gli elementi della pagina.
+- Creo la variabile `toInject`.
 ## FASE 1b - Funzioni
 - Creo una funzione `objectToString` che dato un oggetto, crea una stringa pronta da iniettare in DOM:
     - Creo una variabile d'appoggio `string` che conterrà il template contenitore.
@@ -55,7 +56,6 @@ Organizzare i singoli membri in card/schede ispirandovi alle immagini in allegat
 ## FASE 2 - Svolgimento
 ### MILESTONE 1, 2 - BONUS 1, 2
 - **CICLO FOR**:
-    - Creo una variabile d'appoggio `toInject`.
     - Per ogni elemento dentro `team`:
         - Genero una stringa con `objectToString` e la aggiungo a `toInject`.
 - Inietto in pagina `toInject` che comprende il template literal completo per le immagini, il titolo ed il testo, il tutto dentro una card.
