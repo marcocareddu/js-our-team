@@ -1,6 +1,39 @@
 console.log('JS OK')
 
 // * PHASE 1
+
+// ? Functions //*******************/
+
+function objectToString(object) {
+    let string = '<div class="card col col-4 py-3 text-center">';
+    let substring = '<div class="card-body">';
+
+    // For every key in object create a template
+    for (let key in object) {
+
+        if (key === 'photo') {
+            string += `<img src="./img/${object['photo']}" class="card-img-top" alt="photo"></img>`
+        }
+
+        else if (key === 'name') {
+            substring += `<h5 class="card-title">${object['name']}</h5>`
+        }
+
+        else if (key === 'job') {
+            substring += `<p class="card-text">${object['job']}</p>`
+        }
+    }
+
+    // Close substring tag
+    substring += '</div>';
+    // Add substring and close string
+    string += substring + '</div>';
+
+    return string;
+}
+
+// ? *******************************/
+
 // LINK DOM ELEMENTS
 const rowElement = document.querySelector('row');
 
