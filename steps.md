@@ -54,5 +54,9 @@ Organizzare i singoli membri in card/schede ispirandovi alle immagini in allegat
         - `name`, `job`, `photo`.
 ## FASE 2 - Svolgimento
 ### MILESTONE 1, 2 - BONUS 1, 2
-- Inietto in pagina il risultato consegnato dalla funzione `objectToString` che comprende il template literal completo per le immagini, il titolo ed il testo, il tutto dentro una card.
+- **CICLO FOR**:
+    - Creo una variabile d'appoggio `toInject`.
+    - Per ogni elemento dentro `team`:
+        - Genero una stringa con `objectToString` e la aggiungo a `toInject`.
+- Inietto in pagina `toInject` che comprende il template literal completo per le immagini, il titolo ed il testo, il tutto dentro una card.
 
