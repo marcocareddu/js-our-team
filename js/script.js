@@ -3,7 +3,7 @@ console.log('JS OK')
 // * PHASE 1
 
 // ? Functions //*******************/
-
+// Crate ready to inject template from an object
 function objectToString(object) {
     let string = '<div class="card col col-4 py-3 text-center">';
     let substring = '<div class="card-body">';
@@ -31,11 +31,10 @@ function objectToString(object) {
 
     return string;
 }
-
 // ? *******************************/
 
 // LINK DOM ELEMENTS
-const rowElement = document.querySelector('row');
+const rowElement = document.querySelector('.row');
 
 // Crate objects array
 const team = [
@@ -70,3 +69,14 @@ const team = [
         photo: "barbara-ramos-graphic-designer.jpg"
     }
 ];
+
+// Crate var to inject
+let toInject = '';
+
+// Create string for every array element
+for (let i = 0; i < team.length; i++) {
+    toInject += objectToString(team[i]);
+}
+
+// Inject result in DOM
+rowElement.innerHTML = toInject;
